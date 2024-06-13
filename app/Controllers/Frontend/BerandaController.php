@@ -146,12 +146,12 @@ class BerandaController extends BaseController
 		$this->visitor->hitungPengunjung();
 
 		$data = [
-			'fotoPetaLokasi' => $this->menu->where('judul', 'Pemerintahan - Profil - Foto Peta Lokasi')->first(),
-			'sejarah' => $this->menu->where('judul', 'Pemerintahan - Profil - Sejarah')->first(),
-			'geografi' => $this->menu->where('judul', 'Pemerintahan - Profil - Geografi')->first(),
-			'demografi' => $this->menu->where('judul', 'Pemerintahan - Profil - Demografi')->first(),
+			'visi_misi' => $this->menu->where('judul', 'Profil - Visi Misi')->first(),
+			'maklumat_pelayanan' => $this->menu->where('judul', 'Profil - Maklumat Pelayanan')->first(),
+			'kanal_aduan' => $this->menu->where('judul', 'Profil - Kanal Aduan')->first(),
+			'kepuasan_masyarakat' => $this->menu->where('judul', 'Profil - Kepuasan Masyarakat')->first(),
 		];
 
-		return view('frontend/pemerintahan/profil', $data);
+		return view('frontend/profil', $data);
 	}
 }

@@ -1,14 +1,14 @@
 <?= $this->extend('frontend/layout/index') ?>
 
 <?= $this->section('title') ?>
-Profil Kelurahan
+Profil Sudinsos
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 <section class="faqs-section" style="margin-top: -30px;">
     <div class="auto-container">
         <div class="sec-title with-separator centered">
-            <h2>Profil Kelurahan</h2>
+            <h2>Profil Sudinsos</h2>
             <div class="separator"><span class="cir c-1"></span><span class="cir c-2"></span><span class="cir c-3"></span></div>
             <div class="lower-text">Kota Administrasi Jakarta Selatan</div>
         </div>
@@ -20,25 +20,25 @@ Profil Kelurahan
                         <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab1()">
                             <div class="btn-inner tab-btn" data-tab="#tab-1">
                                 <span class="icon flaticon-maps-and-flags"></span>
-                                <span class="txt">Foto & Peta Lokasi</span>
+                                <span class="txt">Visi Misi</span>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab2()">
                             <div class="btn-inner tab-btn" data-tab="#tab-2">
                                 <span class="icon flaticon-business"></span>
-                                <span class="txt">Sejarah</span>
+                                <span class="txt">Maklumat Pelayanan</span>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab3()">
                             <div class="btn-inner tab-btn" data-tab="#tab-3">
                                 <span class="icon flaticon-information"></span>
-                                <span class="txt">Geografi</span>
+                                <span class="txt">Kanal Aduan</span>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab4()">
                             <div class="btn-inner tab-btn" data-tab="#tab-4">
                                 <span class="icon flaticon-line-chart"></span>
-                                <span class="txt">Demografi</span>
+                                <span class="txt">Kepuasan Masyarakat</span>
                             </div>
                         </div>
                     </div>
@@ -93,13 +93,10 @@ Profil Kelurahan
                     return $tanggal_diperbaharui;
                 }
                 ?>
-                <?= $this->include("frontend/_include/pemerintahan/profil/foto_peta_lokasi.php") ?>
-                <?= $this->include("frontend/_include/pemerintahan/profil/sejarah.php") ?>
-                <?= $this->include("frontend/_include/pemerintahan/profil/geografi.php") ?>
-                <?= $this->include("frontend/_include/pemerintahan/profil/demografi.php") ?>
-                <?= $this->include("frontend/_include/pemerintahan/profil/potensi_wilayah.php") ?>
-                <?= $this->include("frontend/_include/pemerintahan/profil/prestasi_kerja.php") ?>
-                <?= $this->include("frontend/_include/pemerintahan/profil/inovasi.php") ?>
+                <?= $this->include("frontend/_include/profil/visi_misi.php") ?>
+                <?= $this->include("frontend/_include/profil/maklumat_pelayanan.php") ?>
+                <?= $this->include("frontend/_include/profil/kanal_aduan.php") ?>
+                <?= $this->include("frontend/_include/profil/kepuasan_masyarakat.php") ?>
 
             </div>
         </div>
