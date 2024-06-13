@@ -88,7 +88,7 @@
                         <div class="lower-box">
                             <div class="upper-info">
                                 <h4><a
-                                        href="<?= base_url('berita-selatan/detail/' . $data['slug']) ?>"><?= $data['judul'] ?></a>
+                                        href="<?= base_url('berita/detail/' . $data['slug']) ?>"><?= $data['judul'] ?></a>
                                 </h4>
                                 <div class="cat-info"><span
                                         class="fa fa-folder"></span><?= $kategori == 'Tidak Terkategori' ? 'Tidak Terkategori' : $kategori->nama_kategori ?>

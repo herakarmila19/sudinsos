@@ -18,10 +18,10 @@
                     <div class="hi-block">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><a target="_blank" href="<?= base_url('berita-selatan/galeri/video/' . $data['id_video']) ?>"><img src="https://img.youtube.com/vi/<?= $tmp2; ?>/sddefault.jpg" alt="<?= $data['judul_video'] ?>"></a></figure>
+                                <figure class="image"><a target="_blank" href="<?= base_url('berita/galeri/video/' . $data['id_video']) ?>"><img src="https://img.youtube.com/vi/<?= $tmp2; ?>/sddefault.jpg" alt="<?= $data['judul_video'] ?>"></a></figure>
                                 <div class="image-cap clearfix pt-3 pb-1">
                                     <p>
-                                        <a target="_blank" href="<?= base_url('berita-selatan/galeri/video/' . $data['id_video']) ?>" style="color: white !important;">
+                                        <a target="_blank" href="<?= base_url('berita/galeri/video/' . $data['id_video']) ?>" style="color: white !important;">
                                             <?= $data['judul_video'] ?>
                                         </a>
                                     </p>

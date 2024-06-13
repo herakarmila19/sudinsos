@@ -103,7 +103,7 @@ Pencarian - Berita Selatan
                                                     </div>
                                                     <div class="lower-box">
                                                         <div class="upper-info">
-                                                            <h4><a href="<?= base_url('berita-selatan/detail/' . $data['slug']) ?>"><?= $data['judul'] ?></a></h4>
+                                                            <h4><a href="<?= base_url('berita/detail/' . $data['slug']) ?>"><?= $data['judul'] ?></a></h4>
                                                             <div class="cat-info"><span class="fa fa-folder"></span><?= $kategori == 'Tidak Terkategori' ? 'Tidak Terkategori' : $kategori->nama_kategori ?></div>
                                                         </div>
                                                         <div class="meta-info clearfix">
@@ -161,7 +161,7 @@ Pencarian - Berita Selatan
                                     <div class="sidebar-title">
                                         <h4>Pencarian Berita</h4>
                                     </div>
-                                    <form method="get" action="<?= base_url('berita-selatan/pencarian') ?>">
+                                    <form method="get" action="<?= base_url('berita/pencarian') ?>">
                                         <div class="form-group">
                                             <input type="search" name="pencarian" value="" placeholder="Kata kunci..." required>
                                             <button type="submit"><span class="icon flaticon-magnifying-glass"></span></button>
@@ -203,7 +203,7 @@ Pencarian - Berita Selatan
                                                         <img src="<?= $data['thumbnail'] == null ? base_url('upload/default/berita-kosong.png') : (file_exists('upload/thumbnail/' . $data['thumbnail']) ? base_url('upload/thumbnail/' . $data['thumbnail']) : base_url('upload/default/berita-kosong.png')) ?>" alt="<?= $data['slug'] ?>">
                                                     </figure>
                                                     <div class="post-date"><?= namaHari(date('D', strtotime($data['publish_date']))) ?>, <?= date('d', strtotime($data['publish_date'])) ?> <?= namaBulan(date('M', strtotime($data['publish_date']))) ?> <?= date('Y', strtotime($data['publish_date'])) ?></div>
-                                                    <h5 class="title"><a href="<?= base_url('berita-selatan/detail/' . $data['slug']) ?>"><?= $data['judul'] ?></a></h5>
+                                                    <h5 class="title"><a href="<?= base_url('berita/detail/' . $data['slug']) ?>"><?= $data['judul'] ?></a></h5>
                                                 </div>
                                             </div>
                                         <?php endforeach; ?>

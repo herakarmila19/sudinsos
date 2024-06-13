@@ -1,4 +1,4 @@
-<div class="tab" id="tab-6">
+<div class="tab" id="tab-1">
     <div class="row clearfix">
         <div class="tab-col col-lg-12 col-md-12 col-sm-12">
             <div class="inner">
@@ -9,16 +9,23 @@
                                 <section class="history-section">
                                     <div class="auto-container">
                                         <div class="sec-title with-separator centered" style="margin-top: -40px;">
-                                            <h2>Daftar Informasi Publik</h2>
+                                            <h2>Visi Misi</h2>
                                             <div class="separator"><span class="cir c-1"></span><span
                                                     class="cir c-2"></span><span class="cir c-3"></span></div>
-                                            <!-- <div class="lower-text">
-                                            </div> -->
                                         </div>
 
-                                        <!-- START KONTEN -->
-                                        <?= $daftarInformasiPublik['isi_konten'] ?>
-                                        <!-- END KONTEN -->
+                                        <?php if ($visi_misi != null) : ?>
+                                        <?= $visi_misi['isi_konten'] ?>
+                                        <?php else : ?>
+                                        <div class="service-details"
+                                            style="margin: 0px 20px 0px 20px; overflow-x: auto;">
+                                            <table id="table-style">
+                                                <tr>
+                                                    <th>Data Tidak Tersedia</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <?php endif; ?>
                                     </div>
                                 </section>
                             </div>

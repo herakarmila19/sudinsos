@@ -98,7 +98,7 @@
                                     <ul class="navigation clearfix">
                                         <li class="<?= $uri->getSegment(1) == '' ? 'current' : '' ?>"><a href="<?= base_url("/") ?>" id="beranda">Beranda</a></li>
                                         <li class="dropdown <?= $uri->getSegment(1) == 'pemerintahan' ? 'current' : '' ?>">
-                                            <a id="pemerintahan">Profil</a>
+                                            <a id="pemerintahan">Pemerintahan</a>
                                             <ul>
                                                 <li><a href="<?= base_url('pemerintahan/profil') ?>" id="profil">Profil</a></li>
                                                 <li><a href="<?= base_url('pemerintahan/perangkat-kelurahan') ?>" id="perangkat-kelurahan">Perangkat Kelurahan</a></li>
@@ -140,7 +140,8 @@
                                             </ul>
                                         </li> -->
 
-                                        <li class="<?= $uri->getSegment(1) == 'ppid-kelurahan' ? 'current' : '' ?>"><a href="<?= base_url('ppid-kelurahan') ?>" id="ppid_kelurahan">Maklumat Layanan</a></li>
+                                        <li class="<?= $uri->getSegment(1) == 'ppid-kelurahan' ? 'current' : '' ?>"><a href="<?= base_url('ppid-kelurahan') ?>" id="ppid_kelurahan">PPID
+                                                Kelurahan Pela Mampang</a></li>
 
                                         <!-- <li class="<?= $uri->getSegment(1) == 'informasi-publik' ? 'current' : '' ?>"><a href="<?= base_url('informasi-publik') ?>" id="informasi_publik">Informasi Publik</a></li> -->
 
