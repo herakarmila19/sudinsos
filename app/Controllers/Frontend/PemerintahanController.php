@@ -28,22 +28,7 @@ class PemerintahanController extends BaseController
 		$this->visitor = new VisitorModel();
 	}
 
-	public function profil()
-	{
-		$this->visitor->hitungPengunjung();
-
-		$data = [
-			'fotoPetaLokasi' => $this->menu->where('judul', 'Pemerintahan - Profil - Foto Peta Lokasi')->first(),
-			'sejarah' => $this->menu->where('judul', 'Pemerintahan - Profil - Sejarah')->first(),
-			'geografi' => $this->menu->where('judul', 'Pemerintahan - Profil - Geografi')->first(),
-			'demografi' => $this->menu->where('judul', 'Pemerintahan - Profil - Demografi')->first(),
-			'potensiWilayah' => $this->menu->where('judul', 'Pemerintahan - Profil - Potensi Wilayah')->first(),
-			'prestasiKerjaData' => $this->prestasi_kerja->where('status', 1)->orderBy('id', 'asc')->find(),
-			'inovasi' => $this->menu->where('judul', 'Pemerintahan - Profil - Inovasi')->first(),
-		];
-
-		return view('frontend/pemerintahan/profil', $data);
-	}
+	
 
 	public function perangkat_kelurahan()
 	{

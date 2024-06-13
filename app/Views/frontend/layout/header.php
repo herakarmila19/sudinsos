@@ -97,73 +97,9 @@
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
                                         <li class="<?= $uri->getSegment(1) == '' ? 'current' : '' ?>"><a href="<?= base_url("/") ?>" id="beranda">Beranda</a></li>
-                                        <li class="dropdown <?= $uri->getSegment(1) == 'pemerintahan' ? 'current' : '' ?>">
-                                            <a id="pemerintahan">Pemerintahan</a>
-                                            <ul>
-                                                <li><a href="<?= base_url('pemerintahan/profil') ?>" id="profil">Profil</a></li>
-                                                <li><a href="<?= base_url('pemerintahan/perangkat-kelurahan') ?>" id="perangkat-kelurahan">Perangkat Kelurahan</a></li>
-                                                <li><a href="<?= base_url('pemerintahan/layanan') ?>" id="layanan">Layanan</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown <?= $uri->getSegment(1) == 'berita-selatan' ? 'current' : '' ?>">
-                                            <a href="#" id="berita_selatan">Berita</a>
-                                            <ul>
-                                                <li><a href="<?= base_url('berita-selatan') ?>" id="semua_berita">Semua
-                                                        Berita</a></li>
-                                                <li class="dropdown"><a href="#" id="kategori">Kategori</a>
-                                                    <ul>
-                                                        <li><a href="<?= base_url('berita-selatan/kategori/kesejahteraan-rakyat') ?>" id="kesejahteraan_rakyat">Kesejahteraan Rakyat</a></li>
-                                                        <li><a href="<?= base_url('berita-selatan/kategori/pemerintahan') ?>" id="pemerintahan2">Pemerintahan</a></li>
-                                                        <li><a href="<?= base_url('berita-selatan/kategori/perekonomian-dan-pembangunan') ?>" id="perekonomian_pembangunan">Perekonomian dan
-                                                                Pembangunan</a></li>
-                                                        <li><a href="<?= base_url('berita-selatan/kategori/sosial-budaya') ?>" id="sosial_budaya">Sosial Budaya</a></li>
-                                                    </ul>
-                                                </li>
-                                                <!-- <li class="dropdown"><a href="#" id="galeri">Galeri</a>
-                                                    <ul>
-                                                        <li><a href="<?= base_url('berita-selatan/galeri/foto') ?>" id="foto">Foto</a></li>
-                                                        <li><a href="<?= base_url('berita-selatan/galeri/video') ?>" id="video">Video</a></li>
-                                                    </ul>
-                                                </li> -->
-                                            </ul>
-                                        </li>
-
-                                        <!-- <li class="dropdown <?= $uri->getSegment(1) == 'ppid' ? 'current' : '' ?>"><a href="#" id="ppid_jaksel">PPID Jak-Sel</a>
-                                            <ul>
-
-                                                <li><a href="<?= base_url('ppid/profil') ?>" id="ppid_jaksel_profil">Profil</a></li>
-                                                <li><a href="<?= base_url('ppid/alur-mekanisme') ?>" id="alur_mekanisme">Alur Mekanisme</a></li>
-                                                <li><a href="http://ppid.jakarta.go.id/daftar-informasi-publik?skpd=walikota-kota-administrasi-jakarta-selatan" target="_blank" id="daftar_informasi_publik">Daftar Informasi Publik</a></li>
-                                                <li><a href="https://corona.jakarta.go.id/id/peta-persebaran" target="_blank" id="data_corona">Data Corona</a></li>
-                                                <li><a href="https://ppid.jakarta.go.id/" target="_blank" id="ppid_prov_dki">PPID Provinsi DKI Jakarta</a></li>
-                                            </ul>
-                                        </li> -->
-
-                                        <li class="<?= $uri->getSegment(1) == 'ppid-kelurahan' ? 'current' : '' ?>"><a href="<?= base_url('ppid-kelurahan') ?>" id="ppid_kelurahan">PPID
-                                                Kelurahan Pela Mampang</a></li>
-
-                                        <!-- <li class="<?= $uri->getSegment(1) == 'informasi-publik' ? 'current' : '' ?>"><a href="<?= base_url('informasi-publik') ?>" id="informasi_publik">Informasi Publik</a></li> -->
-
-                                        <!-- NOTE Hold -->
-                                        <!-- <li class="dropdown"><a href="#">Informasi</a>
-                                                    <ul>
-                                                        <li><a href="http://ppid.jakarta.go.id/daftar-informasi-publik?skpd=walikota-kota-administrasi-jakarta-selatan" target="_blank">Daftar Informasi Publik</a></li>
-                                                        <li><a href="https://corona.jakarta.go.id/id/peta-persebaran" target="_blank">Data Corona</a></li>
-                                                        <li><a href="https://ppid.jakarta.go.id/" target="_blank">PPID Provinsi DKI Jakarta</a></li>
-                                                    </ul>
-                                                </li> -->
-                                        <!-- <li class="dropdown"><a href="#">Relasi</a>
-                                                    <ul>
-                                                        <li><a href="https://sudinhubjaksel.com/" target="_blank">Perhubungan Jakarta Selatan</a></li>
-                                                        <li><a href="https://ppid.jakarta.go.id/" target="_blank">PPID Jakarta</a></li>
-                                                        <li><a href="https://data.jakarta.go.id/" target="_blank">Open Data</a></li>
-                                                        <li><a href="https://bpbd.jakarta.go.id/" target="_blank">Badan Penanggulangan Bencana Daerah</a></li>
-                                                        <li><a href="https://bptsp.jakarta.go.id/" target="_blank">Badan Pelayanan Terpadu Satu Pintu</a></li>
-                                                        <li><a href="https://bkddki.jakarta.go.id/" target="_blank">Badan Kepegawaian Daerah</a></li>
-                                                    </ul>
-                                                </li> -->
-
+                                        <li class="<?= $uri->getSegment(1) == 'profil' ? 'current' : '' ?>"><a href="<?= base_url("profil") ?>" id="profil">Profil Sudinsos</a></li>
+                                        <li class="<?= $uri->getSegment(1) == 'pelayanan' ? 'current' : '' ?>"><a href="<?= base_url("pelayanan") ?>" id="pelayanan">Pelayanan</a></li>
+                                        <li class="<?= $uri->getSegment(1) == 'berita' ? 'current' : '' ?>"><a href="<?= base_url("berita") ?>" id="berita">Berita</a></li>
                                     </ul>
                                 </div>
                             </nav>

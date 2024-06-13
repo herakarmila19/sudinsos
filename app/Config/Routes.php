@@ -36,6 +36,7 @@ $routes->setAutoRoute(true);
 
 // Beranda
 $routes->get('/', 'Frontend\BerandaController::index');
+$routes->get('profil', 'Frontend\BerandaController::profil');
 
 // Menu
 $routes->get('menu/(:any)', 'Frontend\BerandaController::menu/$1');
@@ -45,7 +46,6 @@ $routes->get('files/(:any)', 'Frontend\BerandaController::files/$1');
 
 // Pemerintahan
 $routes->group('pemerintahan', function ($routes) {
-    $routes->get('profil', 'Frontend\PemerintahanController::profil');
     $routes->get('perangkat-kelurahan', 'Frontend\PemerintahanController::perangkat_kelurahan');
     $routes->get('layanan', 'Frontend\PemerintahanController::layanan');
     $routes->get('pejabat/(:any)', 'Frontend\PemerintahanController::pejabat/$1');

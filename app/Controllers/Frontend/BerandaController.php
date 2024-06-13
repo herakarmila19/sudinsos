@@ -139,4 +139,19 @@ class BerandaController extends BaseController
 			return redirect('/');
 		}
 	}
+
+	// profil
+	public function profil()
+	{
+		$this->visitor->hitungPengunjung();
+
+		$data = [
+			'fotoPetaLokasi' => $this->menu->where('judul', 'Pemerintahan - Profil - Foto Peta Lokasi')->first(),
+			'sejarah' => $this->menu->where('judul', 'Pemerintahan - Profil - Sejarah')->first(),
+			'geografi' => $this->menu->where('judul', 'Pemerintahan - Profil - Geografi')->first(),
+			'demografi' => $this->menu->where('judul', 'Pemerintahan - Profil - Demografi')->first(),
+		];
+
+		return view('frontend/pemerintahan/profil', $data);
+	}
 }

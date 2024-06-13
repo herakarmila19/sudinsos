@@ -17,47 +17,28 @@ Profil Kelurahan
             <div class="tabs-content">
                 <div class="tab-buttons">
                     <div class="row clearfix">
-                        <div class="col-lg-4 col-md-4 col-sm-6" onclick="scrollTab1()">
+                        <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab1()">
                             <div class="btn-inner tab-btn" data-tab="#tab-1">
                                 <span class="icon flaticon-maps-and-flags"></span>
                                 <span class="txt">Foto & Peta Lokasi</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6" onclick="scrollTab2()">
+                        <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab2()">
                             <div class="btn-inner tab-btn" data-tab="#tab-2">
                                 <span class="icon flaticon-business"></span>
                                 <span class="txt">Sejarah</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6" onclick="scrollTab3()">
+                        <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab3()">
                             <div class="btn-inner tab-btn" data-tab="#tab-3">
                                 <span class="icon flaticon-information"></span>
                                 <span class="txt">Geografi</span>
                             </div>
                         </div>
-
                         <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab4()">
                             <div class="btn-inner tab-btn" data-tab="#tab-4">
                                 <span class="icon flaticon-line-chart"></span>
                                 <span class="txt">Demografi</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab5()">
-                            <div class="btn-inner tab-btn" data-tab="#tab-5">
-                                <span class="icon flaticon-briefcase"></span>
-                                <span class="txt">Potensi Wilayah</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab6()">
-                            <div class="btn-inner tab-btn" data-tab="#tab-6">
-                                <span class="icon flaticon-shield"></span>
-                                <span class="txt">Prestasi Kerja</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6" onclick="scrollTab7()">
-                            <div class="btn-inner tab-btn" data-tab="#tab-7">
-                                <span class="icon flaticon-leaf"></span>
-                                <span class="txt">Inovasi</span>
                             </div>
                         </div>
                     </div>
@@ -146,24 +127,6 @@ Profil Kelurahan
 
     function scrollTab4() {
         document.getElementById("tab-4").scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-
-    function scrollTab5() {
-        document.getElementById("tab-5").scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-
-    function scrollTab5() {
-        document.getElementById("tab-6").scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-
-    function scrollTab5() {
-        document.getElementById("tab-7").scrollIntoView({
             behavior: "smooth"
         });
     }
