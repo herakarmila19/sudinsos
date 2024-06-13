@@ -35,7 +35,6 @@ class BerandaController extends BaseController
 		$this->visitor->hitungPengunjung();
 
 		$data = [
-			'slideData' => $this->slide->where('status', 1)->orderBy('created_date', 'desc')->find(),
 			'visiMisiData' => $this->visiMisi->where('status', 1)->orderBy('created_date', 'asc')->find(),
 			'beritaData' => $this->berita->where('status', 1)->where('publish_date !=', null)->orderBy('publish_date', 'desc')->limit(3)->find(),			
 		];
