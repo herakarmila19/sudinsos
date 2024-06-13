@@ -1,7 +1,7 @@
 <?= $this->extend('backend/layout/index') ?>
 
 <?= $this->section('title') ?>
-Humas Berita
+Berita
 <?= $this->endSection() ?>
 
 <?= $this->section('add-css') ?>
@@ -67,7 +67,7 @@ $(function() {
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Humas Berita</h1>
+                    <h1>Berita</h1>
                 </div>
             </div>
         </div>

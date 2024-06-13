@@ -37,27 +37,10 @@ $routes->setAutoRoute(true);
 // Beranda
 $routes->get('/', 'Frontend\BerandaController::index');
 $routes->get('profil', 'Frontend\BerandaController::profil');
-
-// Menu
-$routes->get('menu/(:any)', 'Frontend\BerandaController::menu/$1');
-
-// Files
-$routes->get('files/(:any)', 'Frontend\BerandaController::files/$1');
-
-// Pemerintahan
-$routes->group('pemerintahan', function ($routes) {
-    $routes->get('perangkat-kelurahan', 'Frontend\PemerintahanController::perangkat_kelurahan');
-    $routes->get('layanan', 'Frontend\PemerintahanController::layanan');
-    $routes->get('pejabat/(:any)', 'Frontend\PemerintahanController::pejabat/$1');
-    $routes->get('wilayah/(:any)', 'Frontend\PemerintahanController::wilayah/$1');
-    $routes->get('bank-data', 'Frontend\PemerintahanController::bank_data');
-    $routes->get('agenda', 'Frontend\PemerintahanController::agenda');
-    $routes->get('regulasi', 'Frontend\PemerintahanController::regulasi');
-    $routes->get('regulasi/(:any)', 'Frontend\PemerintahanController::regulasi_unduh/$1');
-});
+$routes->get('pelayanan', 'Frontend\BerandaController::pelayanan');
 
 // Berita Selatan
-$routes->group('berita-selatan', function ($routes) {
+$routes->group('berita', function ($routes) {
     $routes->get('', 'Frontend\BeritaController::index');
     $routes->get('detail/(:any)', 'Frontend\BeritaController::show/$1');
     $routes->get('pencarian', 'Frontend\BeritaController::pencarian');
@@ -77,17 +60,6 @@ $routes->group('berita-selatan', function ($routes) {
     });
 });
 
-// PPID Kelurahan
-$routes->get('/ppid-kelurahan', 'Frontend\PpidKelurahanController::index');
-
-// PPID Jak-Sel
-// $routes->group('ppid', function ($routes) {
-//     $routes->get('profil', 'Frontend\PpidController::profil');
-//     $routes->get('alur-mekanisme', 'Frontend\PpidController::alur_mekanisme');
-// });
-
-// Informasi Publik
-// $routes->get('informasi-publik', 'Frontend\InformasiPublikController::index');
 
 // Backend =============================================================================
 $routes->get('auth/login', 'Backend\Manajemen\UserController::login');
@@ -121,19 +93,8 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->resource('regulasi', ['controller' => 'Backend\Media\RegulasiController']);
 });
 
-// Hak Akses Kecamatan
-$routes->group('kecamatan', ['filter' => 'authKecamatan'], function ($routes) {
-    $routes->get('', 'Backend\KecamatanController::index');
-    $routes->get('(:any)/edit', 'Backend\KecamatanController::edit/$1');
-    $routes->patch('(:any)', 'Backend\KecamatanController::update/$1');
-    $routes->get('logout', 'Backend\KecamatanController::logout');
-});
-
 // Halaman API =============================================================================
 $routes->post('api/berita', 'Backend\ApiController::data_berita');
-
-// Menu Custom
-$routes->get('kominfotik-rekrutmen', 'Frontend\BerandaController::menu_custom');
 
 /*
  * --------------------------------------------------------------------
