@@ -87,7 +87,7 @@ Detail Data Menu
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Isi Konten</label>
-                                    <textarea id="summernote" rows="4" name="isi_konten" class="form-control"><?= $menuData->isi_konten ?></textarea>
+                                    <textarea id="summernote" rows="4" name="isi_konten" class="form-control"><?= str_replace('[BASE_URL]', rtrim(base_url(), '/'), $menuData->isi_konten) ?></textarea>
                                 </div>
                             </div>
 

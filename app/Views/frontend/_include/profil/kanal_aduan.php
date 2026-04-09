@@ -15,7 +15,7 @@
                                         </div>
 
                                         <?php if ($kanal_aduan != null) : ?>
-                                        <?= $kanal_aduan['isi_konten'] ?>
+                                        <?= str_replace('[BASE_URL]', rtrim(base_url(), '/'), $kanal_aduan['isi_konten']) ?>
                                         <?php else : ?>
                                         <div class="service-details"
                                             style="margin: 0px 20px 0px 20px; overflow-x: auto;">

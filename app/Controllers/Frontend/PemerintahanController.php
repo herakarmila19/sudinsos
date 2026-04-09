@@ -10,11 +10,10 @@ use App\Models\Pemerintahan\BankDataModel;
 use App\Models\Manajemen\MenuModel;
 use App\Models\Media\RegulasiModel;
 use App\Models\CustomModel;
-use App\Models\VisitorModel;
 
 class PemerintahanController extends BaseController
 {
-	protected $agenda, $pejabat, $prestasi_kerja, $bank_data, $regulasi, $menu, $custom, $visitor;
+	protected $agenda, $pejabat, $prestasi_kerja, $bank_data, $regulasi, $menu, $custom;
 
 	public function __construct()
 	{
@@ -25,15 +24,12 @@ class PemerintahanController extends BaseController
 		$this->regulasi = new RegulasiModel();
 		$this->menu = new MenuModel();
 		$this->custom = new CustomModel();
-		$this->visitor = new VisitorModel();
 	}
 
 	
 
 	public function perangkat_kelurahan()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'lurah' => $this->menu->where('judul', 'Pemerintahan - Perangkat Kelurahan - Lurah')->first(),
 			'strukturOrganisasi' => $this->menu->where('judul', 'Pemerintahan - Perangkat Kelurahan - Struktur Organisasi')->first(),
@@ -46,8 +42,6 @@ class PemerintahanController extends BaseController
 
 	public function layanan()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'standarPelayanan' => $this->menu->where('judul', 'Pemerintahan - Layanan - Standar Pelayanan')->first(),
 			'pelayananPtsp' => $this->menu->where('judul', 'Pemerintahan - Layanan - Pelayanan PTSP')->first(),
@@ -58,8 +52,6 @@ class PemerintahanController extends BaseController
 
 	public function pejabat($pejabat)
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'pejabat' => $pejabat,
 			// Walikota Terdahulu
@@ -130,8 +122,6 @@ class PemerintahanController extends BaseController
 
 	public function wilayah($wilayah)
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'wilayah' => $wilayah,
 			'kota' => $this->menu->where('judul', 'Pemerintahan - Wilayah - Kota Administrasi Jakarta Selatan')->first(),
@@ -152,8 +142,6 @@ class PemerintahanController extends BaseController
 
 	public function bank_data()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'pasarData' => $this->bank_data->where('status', 1)->where('jenis', 'Pasar')->find(),
 			'pasarDataCreatedDate' => $this->bank_data->orderBy('created_date', 'desc')->first(),
@@ -173,8 +161,6 @@ class PemerintahanController extends BaseController
 
 	public function agenda()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'agendaData' => $this->agenda->where('status', 1)->where('publish', 1)->orderBy('tanggal_acara', 'desc')->paginate(5, 'agenda'),
 			'kategoriData' => $this->custom->findAllCustom('kategori_agenda'),
@@ -186,8 +172,6 @@ class PemerintahanController extends BaseController
 
 	public function regulasi()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'regulasiData' => $this->regulasi->where('status', 1)->orderBy('created_date', 'desc')->paginate(5, 'regulasi'),
 			'pager' => $this->regulasi->pager,
@@ -198,8 +182,6 @@ class PemerintahanController extends BaseController
 
 	public function regulasi_unduh($title)
 	{
-		$this->visitor->hitungPengunjung();
-
 		$regulasiData = $this->regulasi->where('title', $title)->first();
 
 		$this->regulasi->updateCustom(

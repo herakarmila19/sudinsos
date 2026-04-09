@@ -18,7 +18,7 @@ class DashboardController extends BaseController
     {
         $data = [
             // Data Manajemen
-            'totalPengunjung' => $this->custom->sumAllCustom('visitor', 'jumlah'),
+            'totalPengunjung' => 0,
             'totalBerita' => $this->custom->countAllCustom('berita'),
             'totalMenu' => $this->custom->countAllCustom('menu'),
         ];

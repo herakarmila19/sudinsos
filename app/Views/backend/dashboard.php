@@ -37,19 +37,8 @@ Dashboard
                         </div>
                         <div class="card-body">
 
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="info-box">
-                                        <span class="info-box-icon bg-success"><i class="fas fa-users"></i></span>
-
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Total Pengunjung</span>
-                                            <span class="info-box-number"><?= number_format($totalPengunjung->jumlah) ?></span>
-                                        </div>
-                                    </div>
-                                </div>                                
-
-                                <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="row">                        
+                                <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="info-box">
                                         <span class="info-box-icon bg-primary"><i class="far fa-folder-open"></i></span>
 
@@ -60,7 +49,7 @@ Dashboard
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="info-box">
                                         <span class="info-box-icon bg-danger"><i class="far fa-newspaper"></i></span>
 

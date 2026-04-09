@@ -4,22 +4,18 @@ namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
 use App\Models\Manajemen\MenuModel;
-use App\Models\VisitorModel;
 
 class PpidKelurahanController extends BaseController
 {
-    protected $agenda, $pejabat, $prestasi_kerja, $bank_data, $regulasi, $menu, $custom, $visitor;
+    protected $agenda, $pejabat, $prestasi_kerja, $bank_data, $regulasi, $menu, $custom;
 
     public function __construct()
     {
         $this->menu = new MenuModel();
-        $this->visitor = new VisitorModel();
     }
 
     public function index()
     {
-        $this->visitor->hitungPengunjung();
-
         $data = [
             'daftarInformasiPublik' => $this->menu->where('judul', 'PPID - Daftar Informasi Publik')->first(),
             'formPermohonanInformasiPublik' => $this->menu->where('judul', 'PPID - Form Permohonan Informasi Publik')->first(),

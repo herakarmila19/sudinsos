@@ -15,7 +15,7 @@
                                         </div>
 
                                         <?php if ($kepuasan_masyarakat != null) : ?>
-                                        <?= $kepuasan_masyarakat['isi_konten'] ?>
+                                        <?= str_replace('[BASE_URL]', rtrim(base_url(), '/'), $kepuasan_masyarakat['isi_konten']) ?>
                                         <?php else : ?>
                                         <div class="service-details"
                                             style="margin: 0px 20px 0px 20px; overflow-x: auto;">

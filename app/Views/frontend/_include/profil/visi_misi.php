@@ -15,7 +15,7 @@
                                         </div>
 
                                         <?php if ($visi_misi != null) : ?>
-                                        <?= $visi_misi['isi_konten'] ?>
+                                        <?= str_replace('[BASE_URL]', rtrim(base_url(), '/'), $visi_misi['isi_konten']) ?>
                                         <?php else : ?>
                                         <div class="service-details"
                                             style="margin: 0px 20px 0px 20px; overflow-x: auto;">

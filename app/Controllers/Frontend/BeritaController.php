@@ -8,11 +8,10 @@ use App\Models\Media\AlbumModel;
 use App\Models\Media\FotoModel;
 use App\Models\Media\VideoModel;
 use App\Models\CustomModel;
-use App\Models\VisitorModel;
 
 class BeritaController extends BaseController
 {
-	protected $berita, $kategori, $album, $foto, $video, $visitor;
+	protected $berita, $kategori, $album, $foto, $video;
 
 	public function __construct()
 	{
@@ -21,13 +20,10 @@ class BeritaController extends BaseController
 		$this->foto = new FotoModel();
 		$this->video = new VideoModel();
 		$this->kategori = new CustomModel();
-		$this->visitor = new VisitorModel();
 	}
 
 	public function index($beritaKategori = null)
 	{
-		$this->visitor->hitungPengunjung();
-
 		if ($beritaKategori == null) {
 			$data = [
 				'beritaData' => $this->berita->where('status', 1)->where('publish_date !=', null)->orderBy('created_date', 'desc')->paginate(6, 'berita'),
@@ -68,8 +64,6 @@ class BeritaController extends BaseController
 
 	public function show($slug)
 	{
-		$this->visitor->hitungPengunjung();
-
 		$beritaData = $this->berita->where('slug', $slug)->where('status', 1)->first();
 		$beritaDataTerbaru = $this->berita->where('status', 1)->where('publish_date !=', null)->orderBy('created_date', 'desc')->limit(3)->find();
 
@@ -92,8 +86,6 @@ class BeritaController extends BaseController
 
 	public function pencarian()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'beritaData' => $this->berita->where('status', 1)->where('publish_date !=', null)->orderBy('created_date', 'desc')->like('judul', $this->request->getVar('pencarian'))->paginate(6, 'pencarian'),
 			'beritaDataTerbaru' => $this->berita->where('status', 1)->where('publish_date !=', null)->orderBy('created_date', 'desc')->limit(3)->find(),
@@ -105,8 +97,6 @@ class BeritaController extends BaseController
 
 	public function kategori($kategori)
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'beritaData' => $this->berita->where('slug', $kategori)->first(),
 			'beritaDataTerbaru' => $this->berita->where('status', 1)->where('publish_date !=', null)->orderBy('created_date', 'desc')->limit(3)->find(),
@@ -118,8 +108,6 @@ class BeritaController extends BaseController
 	// Galeri
 	public function foto()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'albumData' => $this->album->where('status', 1)->orderBy('created_date', 'desc')->paginate(9, 'album'),
 			'pager' => $this->album->pager,
@@ -130,8 +118,6 @@ class BeritaController extends BaseController
 
 	public function foto_show($id_album)
 	{
-		$this->visitor->hitungPengunjung();
-
 		$albumData = $this->album->where('id_album', $id_album)->first();
 
 		$data = [
@@ -144,8 +130,6 @@ class BeritaController extends BaseController
 
 	public function video()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'videoData' => $this->video->where('status', 1)->orderBy('created_date', 'desc')->paginate(9, 'video'),
 			'pager' => $this->video->pager,
@@ -156,8 +140,6 @@ class BeritaController extends BaseController
 
 	public function video_show($id_video)
 	{
-		$this->visitor->hitungPengunjung();
-
 		$videoData = $this->video->where('id_video', $id_video)->first();
 
 		$this->video->updateCustom(

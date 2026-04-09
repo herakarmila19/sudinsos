@@ -7,7 +7,6 @@ use App\Models\Humas\BannerModel;
 use App\Models\Humas\BeritaModel;
 use App\Models\Media\VideoModel;
 use App\Models\Manajemen\MenuModel;
-use App\Models\VisitorModel;
 use App\Models\SlideModel;
 use App\Models\VisiMisiModel;
 use App\Models\CustomModel;
@@ -15,7 +14,7 @@ use App\Models\Humas\AgendaModel;
 
 class BerandaController extends BaseController
 {
-	protected $banner, $berita, $video, $menu, $visitor, $slide, $visiMisi, $custom, $agenda;
+	protected $banner, $berita, $video, $menu, $slide, $visiMisi, $custom, $agenda;
 
 	public function __construct()
 	{
@@ -23,7 +22,6 @@ class BerandaController extends BaseController
 		$this->berita = new BeritaModel();
 		$this->video = new VideoModel();
 		$this->menu = new MenuModel();
-		$this->visitor = new VisitorModel();
 		$this->slide = new SlideModel();
 		$this->visiMisi = new VisiMisiModel();
 		$this->custom = new CustomModel();
@@ -32,8 +30,6 @@ class BerandaController extends BaseController
 
 	public function index()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'visiMisiData' => $this->visiMisi->where('status', 1)->orderBy('created_date', 'asc')->find(),
 			'beritaData' => $this->berita->where('status', 1)->where('publish_date !=', null)->orderBy('publish_date', 'desc')->limit(3)->find(),			
@@ -45,8 +41,6 @@ class BerandaController extends BaseController
 	// profil
 	public function profil()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'visi_misi' => $this->menu->where('judul', 'Profil - Visi Misi')->first(),
 			'maklumat_pelayanan' => $this->menu->where('judul', 'Profil - Maklumat Pelayanan')->first(),
@@ -60,8 +54,6 @@ class BerandaController extends BaseController
 	// pelayanan
 	public function pelayanan()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'pelayanan' => $this->menu->where('judul', 'Pelayanan')->first(),
 		];

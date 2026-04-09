@@ -1,0 +1,111 @@
+<?php
+
+namespace App\Database\Seeds;
+
+use CodeIgniter\Database\Seeder;
+
+class MenuSeeder extends Seeder
+{
+    public function run()
+    {
+        $now = date('Y-m-d H:i:s');
+
+        $data = [
+            [
+                'id_menu'       => '20240101000001',
+                'url'           => 'profil',
+                'judul'         => 'Profil - Visi Misi',
+                'deskripsi'     => 'Visi dan Misi Suku Dinas Sosial Kota Administrasi Jakarta Selatan',
+                'isi_konten'    => '<div style="text-align:center;padding:10px 20px;"><img src="[BASE_URL]/upload/seeder/visi-misi.png" alt="Visi Misi Sudinsos Jakarta Selatan" style="max-width:100%;height:auto;display:inline-block;"></div>',
+                'penulis'       => 'Admin',
+                'thumbnail'     => null,
+                'created_by'    => 'Admin',
+                'created_date'  => $now,
+                'modified_by'   => null,
+                'modified_date' => null,
+                'publish'       => '1',
+                'publish_date'  => $now,
+                'status'        => '1',
+                'pembaca'       => 0,
+            ],
+            [
+                'id_menu'       => '20240101000002',
+                'url'           => 'profil',
+                'judul'         => 'Profil - Maklumat Pelayanan',
+                'deskripsi'     => 'Maklumat Pelayanan Suku Dinas Sosial Kota Administrasi Jakarta Selatan',
+                'isi_konten'    => '<div style="text-align:center;padding:10px 20px;"><img src="[BASE_URL]/upload/seeder/maklumat-pelayanan.jpg" alt="Maklumat Pelayanan Sudinsos Jakarta Selatan" style="max-width:100%;height:auto;display:inline-block;"></div>',
+                'penulis'       => 'Admin',
+                'thumbnail'     => null,
+                'created_by'    => 'Admin',
+                'created_date'  => $now,
+                'modified_by'   => null,
+                'modified_date' => null,
+                'publish'       => '1',
+                'publish_date'  => $now,
+                'status'        => '1',
+                'pembaca'       => 0,
+            ],
+            [
+                'id_menu'       => '20240101000003',
+                'url'           => 'profil',
+                'judul'         => 'Profil - Kanal Aduan',
+                'deskripsi'     => 'Kanal Aduan Suku Dinas Sosial Kota Administrasi Jakarta Selatan',
+                'isi_konten'    => '<div style="text-align:center;padding:10px 20px;"><img src="[BASE_URL]/upload/seeder/kanal-aduan.jpg" alt="Kanal Aduan Sudinsos Jakarta Selatan" style="max-width:100%;height:auto;display:inline-block;"></div>',
+                'penulis'       => 'Admin',
+                'thumbnail'     => null,
+                'created_by'    => 'Admin',
+                'created_date'  => $now,
+                'modified_by'   => null,
+                'modified_date' => null,
+                'publish'       => '1',
+                'publish_date'  => $now,
+                'status'        => '1',
+                'pembaca'       => 0,
+            ],
+            [
+                'id_menu'       => '20240101000004',
+                'url'           => 'profil',
+                'judul'         => 'Profil - Kepuasan Masyarakat',
+                'deskripsi'     => 'Kepuasan Masyarakat Suku Dinas Sosial Kota Administrasi Jakarta Selatan',
+                'isi_konten'    => '<div style="text-align:center;padding:10px 20px;"><img src="[BASE_URL]/upload/seeder/kepuasan-masyarakat.jpg" alt="Kepuasan Masyarakat Sudinsos Jakarta Selatan" style="max-width:100%;height:auto;display:inline-block;"></div>',
+                'penulis'       => 'Admin',
+                'thumbnail'     => null,
+                'created_by'    => 'Admin',
+                'created_date'  => $now,
+                'modified_by'   => null,
+                'modified_date' => null,
+                'publish'       => '1',
+                'publish_date'  => $now,
+                'status'        => '1',
+                'pembaca'       => 0,
+            ],
+            [
+                'id_menu'       => '20240101000005',
+                'url'           => 'pelayanan',
+                'judul'         => 'Pelayanan',
+                'deskripsi'     => 'Informasi Pelayanan Suku Dinas Sosial Kota Administrasi Jakarta Selatan',
+                'isi_konten'    => '<p>1. Standar pelayanan Rekomendasi tanda daftar lembaga kesejahteraan sosial atau izin kegiatan lembaga kesejahteraan sosial</p><div style="text-align:center;padding:10px 20px;"><img src="[BASE_URL]/upload/seeder/pelayanan-1.jpg" alt="Pelayanan 1" style="max-width:100%;height:auto;display:inline-block;"></div><br><p>2. Standar pelayanan pemberian bantuan sosial pemenuhan kebutuhan dasar korban bencana</p><div style="text-align:center;padding:10px 20px;"><img src="[BASE_URL]/upload/seeder/pelayanan-2.jpg" alt="Pelayanan 2" style="max-width:100%;height:auto;display:inline-block;"></div><br><p>3. Standar pelayanan pemberian surat pengantar rekomendasi pemulangan warga binaan sosial</p><div style="text-align:center;padding:10px 20px;"><img src="[BASE_URL]/upload/seeder/pelayanan-3.jpg" alt="Pelayanan 3" style="max-width:100%;height:auto;display:inline-block;"></div><br><p>4. Standar pelayanan pemberian surat keterangan terdaftar Data Terpadu Kesejahteraan Sosial</p><div style="text-align:center;padding:10px 20px;"><img src="[BASE_URL]/upload/seeder/pelayanan-4.jpg" alt="Pelayanan 4" style="max-width:100%;height:auto;display:inline-block;"></div><br><p>5. Standar pelayanan pengurusan re-aktivasi PBI JK APBN<br><i>(*dalam proses)</i></p><br><p>6. Standar pelayanan prosedur pengajuan Alat Bantu Fisik Penyandang Disabilitas</p><div style="text-align:center;padding:10px 20px;"><img src="[BASE_URL]/upload/seeder/pelayanan-6.jpg" alt="Pelayanan 6" style="max-width:100%;height:auto;display:inline-block;"></div><br><p>7. Standar pelayanan pemberian surat pengantar rekomendasi bantuan hibah daerah/pusat</p>',
+                'penulis'       => 'Admin',
+                'thumbnail'     => null,
+                'created_by'    => 'Admin',
+                'created_date'  => $now,
+                'modified_by'   => null,
+                'modified_date' => null,
+                'publish'       => '1',
+                'publish_date'  => $now,
+                'status'        => '1',
+                'pembaca'       => 0,
+            ],
+        ];
+
+        foreach ($data as $row) {
+            // Insert atau update jika sudah ada
+            $exists = $this->db->table('menu')->where('judul', $row['judul'])->countAllResults();
+            if ($exists === 0) {
+                $this->db->table('menu')->insert($row);
+            } else {
+                $this->db->table('menu')->where('judul', $row['judul'])->update($row);
+            }
+        }
+    }
+}

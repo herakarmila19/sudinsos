@@ -4,22 +4,18 @@ namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
 use App\Models\Manajemen\MenuModel;
-use App\Models\VisitorModel;
 
 class PpidController extends BaseController
 {
-	protected $menu, $visitor;
+	protected $menu;
 
 	public function __construct()
 	{
 		$this->menu = new MenuModel();
-		$this->visitor = new VisitorModel();
 	}
 
 	public function profil()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'tentangPpid' => $this->menu->where('judul', 'PPID Jak-Sel - Profil - Tentang')->first(),
 			'dasarPpid' => $this->menu->where('judul', 'PPID Jak-Sel - Profil - Dasar Hukum')->first(),
@@ -35,8 +31,6 @@ class PpidController extends BaseController
 
 	public function alur_mekanisme()
 	{
-		$this->visitor->hitungPengunjung();
-
 		$data = [
 			'permohonanPpid' => $this->menu->where('judul', 'PPID Jak-Sel - Alur Mekanisme - Permohonan PPID')->first(),
 			'keberatanPpid' => $this->menu->where('judul', 'PPID Jak-Sel - Alur Mekanisme - Keberatan PPID')->first(),
