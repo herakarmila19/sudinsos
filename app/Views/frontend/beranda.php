@@ -99,9 +99,7 @@ function showSlides() {
 
 <!-- LINK Include -->
 <?= $this->include("frontend/_include/beranda/slide.php") ?>
-<?= $this->include("frontend/_include/beranda/visi_misi.php") ?>
 <?= $this->include("frontend/_include/beranda/selamat_datang.php") ?>
-<?= $this->include("frontend/_include/beranda/info_terkini.php") ?>
 <?= $this->include("frontend/_include/beranda/partner_wilayah.php") ?>
 
 <!-- START WIDGET -->

@@ -157,7 +157,7 @@
                                                 <li><a href="<?= base_url("seksi/infrastruktur-digital") ?>">Infrastruktur Digital</a></li>
                                             </ul>
                                         </li>
-                                        <li class="<?= $uri->getSegment(1) == 'pjlp' ? 'current' : '' ?>"><a href="<?= base_url("pjlp") ?>" id="pjlp">PJLP</a></li>
+                                        <li><a href="https://selatan.jakarta.go.id/ekinerja-pjlp" target="_blank" id="pjlp">PJLP</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -166,7 +166,7 @@
                         <!-- Contact Button -->
                         <div class="other-links clearfix d-flex align-items-center" style="margin-right: 20px; height: 100px;">
                             <div class="link-box">
-                                <a href="<?= base_url('kontak') ?>" class="theme-btn btn-kontak"><span class="txt">Kontak</span></a>
+                                <a href="https://wa.me/6285811502279" target="_blank" class="theme-btn btn-kontak"><span class="txt">Kontak</span></a>
                             </div>
                         </div>
 

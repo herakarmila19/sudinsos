@@ -38,24 +38,13 @@ Dashboard
                         <div class="card-body">
 
                             <div class="row">                        
-                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
                                     <div class="info-box">
                                         <span class="info-box-icon bg-primary"><i class="far fa-folder-open"></i></span>
 
                                         <div class="info-box-content">
                                             <span class="info-box-text">Total Menu</span>
                                             <span class="info-box-number"><?= number_format($totalMenu) ?></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="info-box">
-                                        <span class="info-box-icon bg-danger"><i class="far fa-newspaper"></i></span>
-
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Total Berita</span>
-                                            <span class="info-box-number"><?= number_format($totalBerita) ?></span>
                                         </div>
                                     </div>
                                 </div>

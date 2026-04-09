@@ -4,26 +4,22 @@ namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
 use App\Models\Humas\BannerModel;
-use App\Models\Humas\BeritaModel;
 use App\Models\Media\VideoModel;
 use App\Models\Manajemen\MenuModel;
 use App\Models\SlideModel;
-use App\Models\VisiMisiModel;
 use App\Models\CustomModel;
 use App\Models\Humas\AgendaModel;
 
 class BerandaController extends BaseController
 {
-	protected $banner, $berita, $video, $menu, $slide, $visiMisi, $custom, $agenda;
+	protected $banner, $video, $menu, $slide, $custom, $agenda;
 
 	public function __construct()
 	{
 		$this->banner = new BannerModel();
-		$this->berita = new BeritaModel();
 		$this->video = new VideoModel();
 		$this->menu = new MenuModel();
 		$this->slide = new SlideModel();
-		$this->visiMisi = new VisiMisiModel();
 		$this->custom = new CustomModel();
 		$this->agenda = new AgendaModel();
 	}
@@ -31,14 +27,12 @@ class BerandaController extends BaseController
 	public function index()
 	{
 		$data = [
-			'visiMisiData' => $this->visiMisi->where('status', 1)->orderBy('created_date', 'asc')->find(),
-			'beritaData' => $this->berita->where('status', 1)->where('publish_date !=', null)->orderBy('publish_date', 'desc')->limit(3)->find(),			
 		];
 
 		return view('frontend/beranda', $data);
 	}
 
-	// profil
+	// profil main
 	public function profil()
 	{
 		$data = [
@@ -49,6 +43,23 @@ class BerandaController extends BaseController
 		];
 
 		return view('frontend/profil', $data);
+	}
+
+	// halaman dinamis (submenu profil & seksi)
+	public function halaman($seg1, $seg2)
+	{
+		$url = $seg1 . '/' . $seg2;
+		$menuData = $this->menu->where('url', $url)->first();
+		
+		if (!$menuData) {
+			throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+		}
+
+		$data = [
+			'menu' => $menuData,
+		];
+
+		return view('frontend/halaman', $data);
 	}
 
 	// pelayanan

@@ -37,6 +37,8 @@ $routes->setAutoRoute(true);
 // Beranda
 $routes->get('/', 'Frontend\BerandaController::index');
 $routes->get('profil', 'Frontend\BerandaController::profil');
+$routes->get('profil/(:segment)', 'Frontend\BerandaController::halaman/profil/$1');
+$routes->get('seksi/(:segment)', 'Frontend\BerandaController::halaman/seksi/$1');
 $routes->get('pelayanan', 'Frontend\BerandaController::pelayanan');
 
 // Berita Selatan
