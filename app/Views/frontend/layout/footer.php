@@ -7,7 +7,7 @@
                     <a href="https://facebook.com/PemkotJakartaSelatan" target="_blank"><span class="fab fa-facebook-f mr-4"></span></a>
                     <a href="https://twitter.com/kotajaksel" target="_blank">
 						<!-- <span class="fab fa-twitter mr-4"></span> -->
-						<img class="mr-4" src="<?= base_url('public/assets/images/icons/twitter-x-footer.png') ?>" width="14" height="14" alt="footer-twitter-x" style="margin-top: -2px;">
+						<img class="mr-4" src="<?= base_url('public/assets/images/icons/twitter-x-white.png') ?>" width="14" height="14" alt="footer-twitter-x" style="margin-top: -2px;">
 					</a>
                     <a href="https://www.youtube.com/KominfotikJaksel" target="_blank"><span class="fab fa-youtube mr-4"></span></a>
                     <a href="https://www.instagram.com/kotajakartaselatan/" target="_blank"><span class="fab fa-instagram"></span></a>

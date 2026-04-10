@@ -57,34 +57,57 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-        /* Kustomisasi Warna Header */
+        /* Kustomisasi Warna Header & Footer */
+        .main-header .header-upper {
+            background-color: #FEBA01 !important;
+        }
+
+        .main-footer-two, 
+        .main-footer-two .footer-bottom {
+            background-color: #E04F5E !important;
+        }
+
+        /* Kontras Header */
         .main-menu .navigation > li > a {
-            color: #0052B5 !important;
+            color: #FFFFFF !important; /* Ubah ke putih */
+            font-weight: 700 !important;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Tambahkan shadow agar terbaca di kuning */
         }
 
         .main-menu .navigation > li:hover > a,
         .main-menu .navigation > li.current > a,
         .sticky-header .main-menu .navigation > li:hover > a,
         .sticky-header .main-menu .navigation > li.current > a {
-            color: #FEB605 !important;
+            color: #003366 !important; /* Berubah jadi gelap saat hover agar kontras */
+            text-shadow: none;
+        }
+
+        /* Memastikan panah dropdown ikut berubah warna */
+        .main-menu .navigation > li.dropdown:hover > a:before,
+        .main-menu .navigation > li.dropdown.current > a:before {
+            color: #003366 !important;
         }
 
         .main-menu .navigation > li.dropdown > a:before {
-            color: #0052B5 !important;
+            color: #FFFFFF !important;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
-        .main-menu .navigation > li.dropdown:hover > a:before,
-        .main-menu .navigation > li.dropdown.current > a:before {
-            color: #FEB605 !important;
+        /* Kontras Footer */
+        .main-footer-two .footer-widget h4,
+        .main-footer-two .widget-content,
+        .main-footer-two .widget-content a,
+        .main-footer-two .num-links li,
+        .main-footer-two .copyright,
+        .main-footer-two .footer-bottom .inner .copyright a, 
+        .main-footer-two .upper-logo-box .logo a span {
+            color: #FFFFFF !important;
+            opacity: 1 !important;
         }
 
         /* Kustomisasi Mobile Menu Navbar */
         .mobile-menu .navigation li > a {
-            color: #0052B5 !important;
-        }
-        .mobile-menu .navigation li > a:hover,
-        .mobile-menu .navigation li.current > a {
-            color: #FEB605 !important;
+            color: #003366 !important;
         }
 
         /* Kustomisasi Button Kontak */
@@ -126,8 +149,8 @@
                         <!-- Logo Atas Kiri -->
                         <div class="logo-box clearfix">
                             <div class="logo d-flex align-items-center" id="logo_webadmin_jaksel">
-                                <img src="<?= base_url('public/assets/images/logo/jaksel-hijau.png') ?>" alt="Logo Jakarta Selatan" style="max-height: 50px; margin-right: 15px;">
-                                <img src="<?= base_url('upload/seeder/logo-diskominfotik.jpeg') ?>" alt="Logo Diskominfotik" style="max-height: 50px;">
+                                <img src="<?= base_url('public/assets/images/logo/jaksel-putih.png') ?>" alt="Logo Jakarta Selatan" style="max-height: 50px; margin-right: 15px;">
+                                <img src="<?= base_url('upload/seeder/logo-diskominfotik.png') ?>" alt="Logo Diskominfotik" style="max-height: 50px;">
                             </div>
                             <div class="search-btn search-btn-one" style="padding-left: 80px;"></div>
                         </div>
@@ -181,8 +204,8 @@
 
                 <nav class="menu-box">
                     <div class="nav-logo d-flex align-items-center">
-                        <a href="<?= base_url('/') ?>"><img src="<?= base_url('public/assets/images/logo/jaksel-hijau.png') ?>" alt="Logo Jakarta Selatan" style="max-height: 50px; margin-right: 10px;"></a>
-                        <a href="<?= base_url('/') ?>"><img src="<?= base_url('upload/seeder/logo-diskominfotik.jpeg') ?>" alt="Logo Diskominfotik" style="max-height: 50px;"></a>
+                        <a href="<?= base_url('/') ?>"><img src="<?= base_url('public/assets/images/logo/jaksel-putih.png') ?>" alt="Logo Jakarta Selatan" style="max-height: 50px; margin-right: 10px;"></a>
+                        <a href="<?= base_url('/') ?>"><img src="<?= base_url('upload/seeder/logo-diskominfotik.png') ?>" alt="Logo Diskominfotik" style="max-height: 50px;"></a>
                     </div>
                     <div class="menu-outer">
                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
