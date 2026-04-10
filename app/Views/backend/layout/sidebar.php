@@ -29,14 +29,6 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="<?= base_url('admin/berita') ?>" class="nav-link <?= $uri->getSegment(2) == 'berita' ? 'active' : '' ?>">
-                        <i class="nav-icon fas fa-newspaper"></i>
-                        <p>
-                            Berita
-                        </p>
-                    </a>
-                </li>                    
 
             </ul>
         </nav>        

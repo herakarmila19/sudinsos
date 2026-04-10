@@ -41,26 +41,6 @@ $routes->get('profil/(:segment)', 'Frontend\BerandaController::halaman/profil/$1
 $routes->get('seksi/(:segment)', 'Frontend\BerandaController::halaman/seksi/$1');
 $routes->get('pelayanan', 'Frontend\BerandaController::pelayanan');
 
-// Berita Selatan
-$routes->group('berita', function ($routes) {
-    $routes->get('', 'Frontend\BeritaController::index');
-    $routes->get('detail/(:any)', 'Frontend\BeritaController::show/$1');
-    $routes->get('pencarian', 'Frontend\BeritaController::pencarian');
-    $routes->get('kategori/(:any)', 'Frontend\BeritaController::index/$1');
-
-    // Galeri
-    $routes->group('galeri', function ($routes) {
-        $routes->group('foto', function ($routes) {
-            $routes->get('', 'Frontend\BeritaController::foto');
-            $routes->get('(:any)', 'Frontend\BeritaController::foto_show/$1');
-        });
-
-        $routes->group('video', function ($routes) {
-            $routes->get('', 'Frontend\BeritaController::video');
-            $routes->get('(:any)', 'Frontend\BeritaController::video_show/$1');
-        });
-    });
-});
 
 
 // Backend =============================================================================
@@ -85,7 +65,6 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
 
     // Humas ==========
     $routes->resource('banner', ['controller' => 'Backend\Humas\BannerController']);
-    $routes->resource('berita', ['controller' => 'Backend\Humas\BeritaController']);
     $routes->resource('agenda', ['controller' => 'Backend\Humas\AgendaController']);
 
     // Media ==========
@@ -96,7 +75,6 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
 });
 
 // Halaman API =============================================================================
-$routes->post('api/berita', 'Backend\ApiController::data_berita');
 
 /*
  * --------------------------------------------------------------------
