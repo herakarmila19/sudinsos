@@ -107,7 +107,56 @@
 
         /* Kustomisasi Mobile Menu Navbar */
         .mobile-menu .navigation li > a {
-            color: #003366 !important;
+            color: #FFFFFF !important; /* Putih agar kontras di background gelap */
+            font-weight: 500 !important;
+        }
+
+        .mobile-menu .navigation li.current > a,
+        .mobile-menu .navigation li > a:hover {
+            color: #FEBA01 !important;
+        }
+
+        /* Responsive Header 1 Baris */
+        @media only screen and (max-width: 767px) {
+            .header-upper .inner-container {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 10px 15px !important;
+            }
+
+            .logo-box {
+                flex: 1 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                float: none !important;
+            }
+
+            .logo-box .logo img {
+                max-height: 40px !important; /* Perkecil sedikit agar muat */
+                margin-right: 8px !important;
+            }
+
+            .nav-outer {
+                float: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                display: flex !important;
+                align-items: center !important;
+            }
+
+            .mobile-nav-toggler {
+                margin: 0 !important;
+                padding: 5px !important;
+            }
+
+            .other-links {
+                display: none !important; /* Sembunyikan tombol kontak di row utama mobile agar tidak penuh */
+            }
+
+            .search-btn {
+                display: none !important;
+            }
         }
 
         /* Kustomisasi Button Kontak */
