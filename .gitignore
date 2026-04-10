@@ -5,3 +5,4 @@
 !/writable/logs/index.html
 /writable/session/*
 !/writable/session/index.html
+.env
