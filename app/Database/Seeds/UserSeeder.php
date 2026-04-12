@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
             'nama' => 'Admin',
             'email' => '',
             'username' => 'admin',
-            'password' => password_hash('admin_sudinsos', PASSWORD_DEFAULT),
+            'password' => password_hash('admin_sudinsos2026', PASSWORD_DEFAULT),
             'status' => '1',
             'created_by' => '',
             'created_date' => '2024-06-13 15:00:00',
