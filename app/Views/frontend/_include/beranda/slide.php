@@ -8,7 +8,10 @@
                     <div class="content clearfix">
                         <div class="inner" style="background: rgba(0, 0, 0, 0.4);">
                             <h1>
-                                Sukses Jakarta Untuk Indonesia
+                                Suku Dinas Komunikasi, Informatika, dan Statistik
+                            </h1>
+                            <h1>     
+                                Kota Administrasi Jakarta Selatan 
                             </h1>
                         </div>
                     </div>

@@ -173,6 +173,37 @@
             background-color: #FEB605 !important;
             color: #ffffff !important;
         }
+
+        /* Navbar position closer to Kontak */
+        @media only screen and (min-width: 768px) {
+            .header-style-one .header-upper .inner-container {
+                display: flex !important;
+                align-items: center !important;
+            }
+
+            .header-style-one .header-upper .nav-outer {
+                float: none !important;
+                width: auto !important;
+                margin-left: auto !important;
+            }
+
+            .header-style-one .header-upper .other-links {
+                float: none !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                margin: 0 !important;
+            }
+        }
+
+        /* Center hero slide text */
+        .banner-carousel-two .content-box .inner {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .banner-carousel-two .content-box h1 {
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -213,15 +244,15 @@
                             <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li class="<?= $uri->getSegment(1) == '' ? 'current' : '' ?>"><a href="<?= base_url("/") ?>" id="beranda">Beranda</a></li>
-                                        <li class="dropdown <?= $uri->getSegment(1) == 'profil' ? 'current' : '' ?>"><a href="<?= base_url("profil") ?>" id="profil">Profil</a>
+                                        <li class="<?= $uri->getSegment(1) == '' ? 'current' : '' ?>"><a href="<?= base_url("/") ?>" id="beranda">Struktur Organisasi</a></li>
+                                        <li class="dropdown <?= $uri->getSegment(1) == 'profil' ? 'current' : '' ?>"><a href="<?= base_url("profil") ?>" id="profil">Layanan</a>
                                             <ul>
                                                 <li><a href="<?= base_url("profil/struktur-organisasi") ?>">Struktur Organisasi</a></li>
                                                 <li><a href="<?= base_url("profil/tugas-fungsi") ?>">Tugas dan Fungsi</a></li>
                                                 <li><a href="<?= base_url("profil/kinerja") ?>">Kinerja</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown <?= $uri->getSegment(1) == 'seksi' ? 'current' : '' ?>"><a href="<?= base_url("seksi") ?>" id="seksi">Seksi</a>
+                                        <li class="dropdown <?= $uri->getSegment(1) == 'seksi' ? 'current' : '' ?>"><a href="<?= base_url("seksi") ?>" id="seksi">Kominfo Apps</a>
                                             <ul>
                                                 <li><a href="<?= base_url("seksi/tata-usaha") ?>">Tata Usaha</a></li>
                                                 <li><a href="<?= base_url("seksi/komunikasi-informasi-publik") ?>">Komunikasi dan Informasi Publik</a></li>
@@ -229,7 +260,7 @@
                                                 <li><a href="<?= base_url("seksi/infrastruktur-digital") ?>">Infrastruktur Digital</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="https://selatan.jakarta.go.id/ekinerja-pjlp" target="_blank" id="pjlp">PJLP</a></li>
+                                        <li><a href="https://selatan.jakarta.go.id/ekinerja-pjlp" target="_blank" id="pjlp">Kegiatan</a></li>
                                     </ul>
                                 </div>
                             </nav>

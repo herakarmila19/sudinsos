@@ -1,14 +1,14 @@
 <?= $this->extend('frontend/layout/index') ?>
 
 <?= $this->section('title') ?>
-Profil Sudinsos
+Profil Kominfotik Jaksel
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 <section class="faqs-section" style="margin-top: -30px;">
     <div class="auto-container">
         <div class="sec-title with-separator centered">
-            <h2>Profil Sudinsos</h2>
+            <h2>Profil Kominfotik Jaksel</h2>
             <div class="separator"><span class="cir c-1"></span><span class="cir c-2"></span><span class="cir c-3"></span></div>
             <div class="lower-text">Kota Administrasi Jakarta Selatan</div>
         </div>
