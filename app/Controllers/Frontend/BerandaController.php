@@ -26,7 +26,27 @@ class BerandaController extends BaseController
 
 	public function index()
 	{
+		$infografis = $this->menu->where('judul', 'Infografis')->first();
+		if (empty($infografis)) {
+			$infografis = $this->menu->where('judul', 'Info Grafis')->first();
+		}
+
+		$kegiatan = $this->menu->where('judul', 'Kegiatan')->first();
+
+		// Fetch Kominfo Apps
+		$apps = [];
+		try {
+			$apps = $this->custom->view('aplikasi', '*', null, 'urutan', 'ASC');
+			$apps = $apps->getResult('array');
+		} catch (\Exception $e) {
+			// Tabel aplikasi tidak ada, lewatkan empty array
+			$apps = [];
+		}
+
 		$data = [
+			'infografis' => $infografis,
+			'kegiatan' => $kegiatan,
+			'kominfo_apps' => $apps,
 		];
 
 		return view('frontend/beranda', $data);

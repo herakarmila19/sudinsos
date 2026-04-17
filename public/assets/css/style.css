@@ -2347,26 +2347,30 @@ img.lazy-image.loaded {
 
 .banner-carousel .content-box {
   position: relative;
-  display: table;
-  vertical-align: middle;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   width: 100%;
   height: 700px;
-  padding: 20px 0px;
+  padding: 20px 0;
   z-index: 5;
 }
 
 .banner-carousel .content-box .content {
   position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  padding: 50px 0px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  padding: 50px 0;
 }
 
 .banner-carousel .content-box .inner {
   position: relative;
   display: block;
   width: 100%;
-  max-width: 600px;
+  max-width: none !important;
+  text-align: center;
 }
 
 .banner-carousel .content-box .subtitle {
@@ -2732,39 +2736,45 @@ img.lazy-image.loaded {
 
 .banner-carousel-two .content-box {
   position: relative;
-  display: table;
-  vertical-align: middle;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   width: 100%;
   height: 700px;
-  padding: 20px 0px;
+  padding: 0;
   z-index: 5;
 }
 
 .banner-carousel-two .content-box .content {
   position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  padding: 60px 0px 0px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  padding: 0;
+  text-align: center;
 }
 
 .banner-carousel-two .content-box .inner {
   position: relative;
   display: block;
-  width: 100%;
-  max-width: 600px;
+  width: fit-content;
+  max-width: 90%;
+  margin: 0 auto;
   background: rgba(0, 0, 0, 0.7);
-  padding: 50px 50px 10px 50px;
+  padding: 50px 90px 40px;
   border-radius: 20px;
+  text-align: center;
 }
 
 .banner-carousel-two .content-box h1 {
   display: block;
   font-size: 60px;
-  line-height: 1.25em;
+  line-height: 1.2em;
   color: #ffffff;
   font-weight: 700;
   opacity: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-transform: capitalize !important;
   letter-spacing: 0;
   -webkit-transform: translateY(80px);
@@ -2924,6 +2934,25 @@ img.lazy-image.loaded {
 
 .banner-section-two .owl-theme .owl-dots {
   display: none;
+}
+
+.banner-carousel-two .content-box h1.main-title {
+  font-size: 72px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  text-transform: none !important;
+}
+
+.banner-carousel-two .content-box h2.sub-title {
+  font-size: 34px;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.banner-carousel-two .content-box h2.sub-title.second-line {
+  margin-top: 8px;
 }
 
 /*** 
@@ -14332,3 +14361,41 @@ img.lazy-image.loaded {
 .checklist {
   background-color: #222222;
 }
+
+.content-box {
+    text-align: center;
+}
+
+.custom-banner-text {
+    background: rgba(0, 0, 0, 0.55);
+    display: inline-block;
+    width: fit-content;
+    min-width: 1400px;
+    max-width: 90%;
+    padding: 55px 90px;
+    border-radius: 16px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 80px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.sub-title {
+    font-size: 34px;
+    color: #f1f1f1;
+    line-height: 1.5;
+    margin: 0;
+    white-space: nowrap; /* biar 1 baris */
+}
+
+.second-line {
+    margin-top: 8px;
+}
+
+

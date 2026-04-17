@@ -100,6 +100,8 @@ function showSlides() {
 <!-- LINK Include -->
 <?= $this->include("frontend/_include/beranda/slide.php") ?>
 <?= $this->include("frontend/_include/beranda/selamat_datang.php") ?>
+<?= $this->include("frontend/_include/beranda/infografis_kegiatan.php") ?>
+<?= $this->include("frontend/_include/beranda/kominfo_apps.php") ?>
 <?= $this->include("frontend/_include/beranda/partner_wilayah.php") ?>
 
 <!-- START WIDGET -->

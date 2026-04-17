@@ -185,6 +185,7 @@
                 float: none !important;
                 width: auto !important;
                 margin-left: auto !important;
+                margin-right: 16px !important;
             }
 
             .header-style-one .header-upper .other-links {
@@ -192,6 +193,11 @@
                 display: inline-flex !important;
                 align-items: center !important;
                 margin: 0 !important;
+                margin-left: 16px !important;
+            }
+
+            .header-style-one .header-upper .mobile-nav-toggler {
+                margin-right: 14px !important;
             }
         }
 
@@ -205,6 +211,9 @@
             text-align: center;
         }
     </style>
+
+    <!-- Instagram Embed Script -->
+    <script async defer src="https://www.instagram.com/embed.js"></script>
 </head>
 
 <body>
